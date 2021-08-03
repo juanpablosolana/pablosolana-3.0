@@ -7,33 +7,77 @@ summary: 'En uno de mis proyectos tengo consultar el webservice del SAT para val
 el estatus de las facturas, por lo que me vi en la necesiadad de crear una API para poder realizarlo'
 ---
 
-A sample post with markdown.
+## Comencemos con este pequeño ejemplo para consumir el webservice del SAT
 
-## Inline Highlighting
+En uno de mis proyecto el cliente necesita saber el estatus de las facturas ante el SAT así que decidí crear una API para poder resolverlo.
 
-Sample of inline highlighting `sum = parseInt(num1) + parseInt(num2)`
+## El web service del SAT
+Cuando escaneas el código QR de una factura se abre una página que te solicita algunos datos para validar el estatus, vamos a obtener ese mismo resultado y necesitamos:
+    * **RFC del emisor**
+    * **RFC del receptor**
+    * **Monto total con centavos**
+    * **UUID de la factura**
+El servicio requiere de una petición SOAP a una URL con el formato de un xml recuerda estos datos lo vamos a necesitar más adelante.
 
-## Code Blocks
+## La API REST
+Decidi utilizar NodeJS para crear la API así que voy a empezar a platicarte las partes del proyecto.
+Necesitas las dependecias:
+* **express**
+* **cors**
+* **xml-js**
+* **easy-soap-request**
 
-Some Javascript code
+Recibir los datos:
 
 ```javascript
-var num1, num2, sum
-num1 = prompt('Enter first number')
-num2 = prompt('Enter second number')
-sum = parseInt(num1) + parseInt(num2) // "+" means "add"
-alert('Sum = ' + sum) // "+" means combine into a string
+app.get("/:re&&:rr&&:tt&&:id", (request, res) => {
+  let { re, rr, tt, id } = request.params
+  re=re.replace(/&/gi, '&amp;')
+  rr=rr.replace(/&/gi, '&amp;')
+  console.log(re, rr, tt, id)
+}
 ```
+rr = RFC del receptor
+re = RFC del emisor
+tt = Monto total con centavos
+id = UUID de la factura
 
-Some Python code 🐍
+La url ya puede recibir los parametros necesarios de la siguiente manera: /RFCEmisor&&RFCReceptor&&MontoTotalConCentavos&&UUID
 
-```python
-def fib():
-    a, b = 0, 1
-    while True:            # First iteration:
-        yield a            # yield 0 to start with and then
-        a, b = b, a + b    # a will now be 1, and b will also be 1, (0 + 1)
+El siguiente paso es armar la petición soap por el webservice del SAT
 
-for index, fibonacci_number in zip(range(10), fib()):
-     print('{i:3}: {f:3}'.format(i=index, f=fibonacci_number))
+```javascript
+    const url = 'https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc';
+      const sampleHeaders = {
+        'user-agent': 'sampleTest',
+        'Content-Type': 'text/xml;charset=UTF-8',
+        'soapAction': 'http://tempuri.org/IConsultaCFDIService/Consulta',
+      };
+      const xml = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+         <soapenv:Header/>
+         <soapenv:Body>
+            <tem:Consulta>
+               <!--Optional:-->
+               <tem:expresionImpresa><![CDATA[?re=${re}?rr=${rr}?tt=${tt}?id=${id}]]>
+               </tem:expresionImpresa>
+            </tem:Consulta>
+         </soapenv:Body>
+      </soapenv:Envelope>`;
+}
 ```
+url contien la liga al servicio de validación, sampleHeaders contiene los headers que se van a utilizar,
+xml tiene el contenido de requerido para la petición soap.
+Ahora se tiene que enviar las variables de la siguiente forma:
+
+```javascript
+const data = async () => {
+    const { response } = await soapRequest({ url: url, headers: sampleHeaders, xml: xml });
+    const { body } = response;
+    res.send(convert.xml2json(body, { compact: true, spaces: 4 }))
+  }
+  data()
+```
+Debes tener ya la respuesta del servidor.
+
+[Te dejo el repositorio por si gustas ver a detalle el código](https://github.com/juanpablosolana/Consulta-Estatus-Facturas-SATMX).
+Saludos.
