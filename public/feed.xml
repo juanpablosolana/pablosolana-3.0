@@ -7,15 +7,15 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Tue, 08 Mar 2016 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 03 Aug 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://pablosolana.dev/blog/code-sample</guid>
-    <title>Sample .md file</title>
-    <link>https://pablosolana.dev/blog/code-sample</link>
-    <description>Example of a markdown file with code blocks and syntax highlighting</description>
-    <pubDate>Tue, 08 Mar 2016 00:00:00 GMT</pubDate>
+    <guid>https://pablosolana.dev/blog/estatus-factura-sat</guid>
+    <title>Consultar estatus de facturas con el SAT</title>
+    <link>https://pablosolana.dev/blog/estatus-factura-sat</link>
+    <description>En uno de mis proyectos tengo consultar el webservice del SAT para validar el estatus de las facturas, por lo que me vi en la necesiadad de crear una API para poder realizarlo</description>
+    <pubDate>Tue, 03 Aug 2021 00:00:00 GMT</pubDate>
     <author>hola@pablosolana.dev (Pablo Solana)</author>
     <category>NodeJS</category><category>Web services</category><category>API</category><category>SAT</category>
   </item>
