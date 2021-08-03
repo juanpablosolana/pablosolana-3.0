@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Pablo Solana Desarrollador JavaScript</title>
+      <link>https://pablosolana.dev/blog</link>
+      <description>Acá unos post de lo que me gusta hacer</description>
+      <language>es-MX</language>
+      <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
+      <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
+      <lastBuildDate>Wed, 04 Aug 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://pablosolana.dev/tags/facturas/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://pablosolana.dev/blog/estatus-factura-sat</guid>
+    <title>Consultar estatus de facturas con el SAT</title>
+    <link>https://pablosolana.dev/blog/estatus-factura-sat</link>
+    <description>Surgio un proyecto donde se deve consultar el webservice del SAT para validar el estatus de las facturas, por lo que me vi en la necesiadad de crear una API para poder validarlo</description>
+    <pubDate>Wed, 04 Aug 2021 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>Facturas</category><category>XML</category><category>Webservices</category><category>SAT</category><category>NodeJS</category><category>API</category>
+  </item>
+
+    </channel>
+  </rss>

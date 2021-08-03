@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'Pablo Solana Desarrollador JavaScript',
+  title: 'Desarrollador JavaScript',
   author: 'Pablo Solana',
   headerTitle: 'Pablo Solana',
   description: 'Acá unos post de lo que me gusta hacer',
