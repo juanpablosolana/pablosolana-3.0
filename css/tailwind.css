@@ -35,13 +35,13 @@ html {
   scroll-behavior: smooth;
 }
 
-textarea, input {
+input, input[type=text], input[type=email], textarea {
   display: block;
   resize: none;
   margin: 1.5rem;
   margin-left: auto;
   margin-right: auto;
-  color:black
+  background: #737373;
 }
 
 .btn {

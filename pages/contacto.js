@@ -55,7 +55,7 @@ const Menu = () => {
             id="name"
             {...register('Nombre')}
             patter="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-            className="w-4/5 text-black"
+            className="w-4/5"
             required
           />
           <input
