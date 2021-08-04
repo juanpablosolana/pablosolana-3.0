@@ -1,5 +1,7 @@
+import siteMetadata from '@/data/siteMetadata'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getFileBySlug } from '@/lib/mdx'
+import { PageSeo } from '@/components/SEO'
 
 const DEFAULT_LAYOUT = 'AuthorLayout'
 
@@ -12,10 +14,13 @@ export default function About({ authorDetails }) {
   const { mdxSource, frontMatter } = authorDetails
 
   return (
-    <MDXLayoutRenderer
-      layout={frontMatter.layout || DEFAULT_LAYOUT}
-      mdxSource={mdxSource}
-      frontMatter={frontMatter}
-    />
+    <>
+      <PageSeo title={`Inicio - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <MDXLayoutRenderer
+        layout={frontMatter.layout || DEFAULT_LAYOUT}
+        mdxSource={mdxSource}
+        frontMatter={frontMatter}
+      />
+    </>
   )
 }

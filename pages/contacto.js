@@ -3,10 +3,6 @@ import { useForm } from 'react-hook-form'
 import { PageSeo } from '@/components/SEO'
 
 const Menu = () => {
-  ;<PageSeo
-    title={`Mis proyectos - ${siteMetadata.author}`}
-    description={siteMetadata.description}
-  />
   const {
     register,
     handleSubmit,
@@ -43,6 +39,7 @@ const Menu = () => {
 
   return (
     <div>
+      <PageSeo title={`Contacto - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div className="max-w-6xl mx-auto">
         <form className="max-w-md p-2 mx-auto contact-form" onSubmit={handleSubmit(onSubmit)}>
           <div className="text-center text-yellow-500">
@@ -119,7 +116,7 @@ const Menu = () => {
               <i className="fas fa-bell" />
             </span>
             <span className="inline-block mr-8 align-middle">
-              <b className="capitalize">¡Enviado! 👌</b> En breve estaremos en contacto 🎆 🔥
+              <b className="capitalize">¡Enviado! </b> En breve estaremos en contacto
             </span>
             <button className="absolute top-0 right-0 mt-4 mr-6 text-2xl font-semibold leading-none bg-transparent outline-none focus:outline-none">
               <span>×</span>
