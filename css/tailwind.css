@@ -44,6 +44,12 @@ input, input[type=text], input[type=email], textarea {
   background: #737373;
 }
 
+input::placeholder, textarea::placeholder {
+  color: whitesmoke;
+  font-size: 1em;
+  font-style: italic;
+}
+
 .btn {
   @apply bg-yellow-500 text-white font-bold rounded border-red-500 border-b-4
 }
