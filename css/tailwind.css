@@ -1,12 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .remark-code-title {
   @apply px-5 py-3 font-mono text-sm font-bold text-gray-200 bg-gray-700 rounded-t;
 }
 
-.remark-code-title + div > pre {
+.remark-code-title+div>pre {
   @apply mt-0 rounded-t-none;
 }
 
@@ -29,4 +28,103 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+* {
+  transition: all 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+textarea, input {
+  display: block;
+  resize: none;
+  margin: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  color:black
+}
+
+.btn {
+  @apply bg-yellow-500 text-white font-bold rounded border-red-500 border-b-4
+}
+
+.btn-reverse {
+  @apply bg-black text-yellow-500 font-bold rounded py-2 px-8
+}
+
+.transparente {
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+.transparente5 {
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.roboto {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-alpha-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+  color: var(--orange);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-close svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--first-color);
+}
+
+.modal#gracias:target {
+  opacity: 1;
+  background-color: var(--black);
+  color: var(--orange);
+  pointer-events: auto;
+}
+
+.contact-form-loader {
+  text-align: center;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .repos-list {
+    columns: 1;
+    -moz-columns: 1;
+    @apply p-4;
+    column-rule: 1px solid red;
+  }
+  .repos-list {
+    break-inside: avoid-column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .repos-list {
+    columns: 2;
+    -moz-columns: 2;
+    @apply p-4;
+    column-rule: 1px solid red;
+  }
+  .repos-list {
+    break-inside: avoid-column;
+  }
 }

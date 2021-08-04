@@ -9,7 +9,7 @@ el estatus de las facturas, por lo que me vi en la necesiadad de crear una API p
 
 ## Comencemos con este pequeño ejemplo para consumir el webservice del SAT
 
-En uno de mis proyecto el cliente necesita saber el estatus de las facturas ante el SAT así que decidí crear una API para poder resolverlo.
+En uno de mis proyectos se necesita saber el estatus de las facturas ante el SAT, por lo que decidí crear una API para poder resolverlo.
 
 ## El web service del SAT
 Cuando escaneas el código QR de una factura se abre una página que te solicita algunos datos para validar el estatus, vamos a obtener ese mismo resultado y necesitamos:
@@ -20,7 +20,7 @@ Cuando escaneas el código QR de una factura se abre una página que te solicita
 El servicio requiere de una petición SOAP a una URL con el formato de un xml recuerda estos datos lo vamos a necesitar más adelante.
 
 ## La API REST
-Decidi utilizar NodeJS para crear la API así que voy a empezar a platicarte las partes del proyecto.
+Decidí utilizar NodeJS para crear la API así que voy a empezar a platicarte las partes del proyecto.
 Necesitas las dependecias:
 * **express**
 * **cors**
@@ -37,14 +37,14 @@ app.get("/:re&&:rr&&:tt&&:id", (request, res) => {
   console.log(re, rr, tt, id)
 }
 ```
-rr = RFC del receptor
-re = RFC del emisor
-tt = Monto total con centavos
-id = UUID de la factura
+**rr** = RFC del receptor
+**re** = RFC del emisor
+**tt** = Monto total con centavos
+**id** = UUID de la factura
 
 La url ya puede recibir los parametros necesarios de la siguiente manera: /RFCEmisor&&RFCReceptor&&MontoTotalConCentavos&&UUID
 
-El siguiente paso es armar la petición soap por el webservice del SAT
+Ahora hay que armar la petición soap por el webservice del SAT
 
 ```javascript
     const url = 'https://consultaqr.facturaelectronica.sat.gob.mx/ConsultaCFDIService.svc';
@@ -65,9 +65,10 @@ El siguiente paso es armar la petición soap por el webservice del SAT
       </soapenv:Envelope>`;
 }
 ```
-url contien la liga al servicio de validación, sampleHeaders contiene los headers que se van a utilizar,
-xml tiene el contenido de requerido para la petición soap.
-Ahora se tiene que enviar las variables de la siguiente forma:
+Los valores de las constantes quedan de la siguiente manera:
+**url** contien la liga al servicio de validación, **sampleHeaders** los headers que se van a utilizar,
+**xml** tiene el contenido de requerido para la petición soap.
+Ahora se tiene que enviar las variables por lo que utilizo el soapRequest con los headers y el xml.
 
 ```javascript
 const data = async () => {
@@ -78,6 +79,7 @@ const data = async () => {
   data()
 ```
 Debes tener ya la respuesta del servidor.
+
 
 [Te dejo el repositorio por si gustas ver a detalle el código](https://github.com/juanpablosolana/Consulta-Estatus-Facturas-SATMX).
 Saludos.
