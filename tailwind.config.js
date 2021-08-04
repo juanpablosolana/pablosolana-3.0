@@ -29,6 +29,7 @@ module.exports = {
           red: '#ff8383',
           blue: '#93ddfd',
           white: '#fff',
+          gris: '#0d1117',
         },
       },
       typography: (theme) => ({
