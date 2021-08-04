@@ -42,10 +42,9 @@ const Menu = () => {
       <PageSeo title={`Contacto - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div className="max-w-6xl mx-auto">
         <form className="max-w-md p-2 mx-auto contact-form" onSubmit={handleSubmit(onSubmit)}>
-          <div className="text-center text-yellow-500">
-            <p className="p-4 text-white">
-              Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en
-              contacto
+          <div className="text-center">
+            <p className="p-4">
+              Si quieres trabajar conmigo en tu próximo proyecto, no dudes en ponerse en contacto
             </p>
           </div>
           <input
