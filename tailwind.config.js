@@ -30,6 +30,7 @@ module.exports = {
           blue: '#93ddfd',
           white: '#fff',
           gris: '#0d1117',
+          azul: '#132339',
         },
       },
       typography: (theme) => ({

@@ -1,0 +1,56 @@
+---
+title: Creando API desde la información de los CFDI
+date: '2021-08-10'
+tags: ['NodeJS', 'CFDI', 'API','SAT']
+draft: false
+summary: 'Los CFDI proveen toda la información de la factura por lo que vamos a generar una API para hacer consultas'
+---
+
+## Antes en el despacho se tenía que capturar la información de cada una de las facturas ¿Te lo imaginas?
+
+La necesidad de sistematizar los datos de los CFDI era un problema por lo que me di a la tarea de generar una API para solucionarlo.
+
+Como siempre decidí utilizar NodeJS y les voy platicar las partes del proyecto, necesitas las dependencias:
+* **express**
+* **cors**
+* **cfdi-to-json**
+* **fs**
+* **path**
+
+Al correr el servidor y entrar a la ruta raíz comienza la magia:
+
+```javascript
+fs.readdir('./',  function (err, archivos) {
+if (err) {
+  onError(err);
+  return;
+}
+archivos.forEach(file => {
+  if (path.extname(file) == '.xml'){
+     let stats = fs.statSync(file);
+     stats.size>1000? cfdi.push(file): null
+  }
+})
+})
+```
+Lo primero que hago es leer el directorio para guardar solo archivos del tipo xml y que su tamaño sea mayor a 1000 bytes, si cumple con la condición guardo el nombre del archivo en un array.
+
+```javascript
+cfdi.forEach(element => {
+    cfdiJson.push(jsonCfdi = CfdiToJson.parse({ path: element }));
+  })
+});
+```
+Por cada archivo que encuentre en el directorio lo transformo a JSON y lo guardo en un array.
+
+```javascript
+app.get('/', (request, response)=>{
+  response.send(findId)
+})
+```
+Lo último es mostrar los datos de todos los xml en un JSON para que pueda ser consultado.
+
+
+Te dejo el repositorio por si gustas ver a detalle el [código](https://github.com/juanpablosolana/cfdi-api) y la API funcionado.
+
+Saludos.

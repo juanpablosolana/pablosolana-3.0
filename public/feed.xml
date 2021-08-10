@@ -7,9 +7,19 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Tue, 03 Aug 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 10 Aug 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://pablosolana.dev/blog/cfdi-api</guid>
+    <title>Creando API desde la información de los CFDI</title>
+    <link>https://pablosolana.dev/blog/cfdi-api</link>
+    <description>Los CFDI proveen toda la información de la factura por lo que vamos a generar una API para hacer consultas</description>
+    <pubDate>Tue, 10 Aug 2021 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>NodeJS</category><category>CFDI</category><category>API</category><category>SAT</category>
+  </item>
+
   <item>
     <guid>https://pablosolana.dev/blog/estatus-factura-sat</guid>
     <title>Consultar estatus de facturas con el SAT</title>
