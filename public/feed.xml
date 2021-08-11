@@ -7,9 +7,19 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Tue, 10 Aug 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 11 Aug 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwk</guid>
+    <title>Obteniendo datos con axios y JavaScript Web Tokens (jwt)</title>
+    <link>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwk</link>
+    <description>Necesitaba pedir datos a una API enviando el token obetenido despúes del login</description>
+    <pubDate>Wed, 11 Aug 2021 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>AXIOS</category><category>JWT</category><category>BEARER</category><category>HEADERS</category>
+  </item>
+
   <item>
     <guid>https://pablosolana.dev/blog/cfdi-api</guid>
     <title>Creando API desde la información de los CFDI</title>

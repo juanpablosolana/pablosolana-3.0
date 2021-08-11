@@ -1,0 +1,64 @@
+---
+title: Obteniendo datos con axios y JavaScript Web Tokens (jwt)
+date: '2021-08-11'
+tags: ['AXIOS', 'JWT', 'BEARER','HEADERS']
+draft: false
+summary: 'Necesitaba pedir datos a una API enviando el token obetenido despúes del login'
+---
+
+## Al hacer login el backend me regresa un token que se usa para validar todas peticiones a la API
+
+**Recuerda importar axios**
+
+
+Supongamos que ya guardaste los datos que te dio el backend en el localStorage, lo primero es recuperarlos y guardarlos en una variable, en este ejemplo datos:
+
+```javascript
+const datos = JSON.parse(localStorage.getItem("user"))
+```
+
+El siguiente paso es recuperar solo el token, que es lo que necesitamos para hacer las peticiones:
+
+```javascript
+const token = datos.token
+```
+Voy a utilizar Bearer por lo que prepararo el header:
+
+```javascript
+const headers = `Bearer ${token}`
+```
+Ahora la petición con axios debe tener el header, de lo contrario el backend te respondera con un error:
+
+```javascript
+axios
+.get("http://localhost:3000/api/v1/cfdi", {
+  headers: { Authorization: headers },
+})
+.then(response => {
+  console.log(response.data)
+})
+.catch((err) => {
+  console.log(err);
+});
+```
+
+Al final deberías tener algo así:
+```javascript
+const datos = JSON.parse(localStorage.getItem("user"))
+const token = datos.token
+const headers = `Bearer ${token}`
+
+axios
+.get("http://localhost:3000/api/v1/cfdi", {
+  headers: { Authorization: headers },
+})
+.then(response => {
+  console.log(response.data)
+})
+.catch((err) => {
+  console.log(err);
+});
+
+```
+
+Saludos
