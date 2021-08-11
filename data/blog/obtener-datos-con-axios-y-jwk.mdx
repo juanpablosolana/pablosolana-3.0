@@ -6,12 +6,12 @@ draft: false
 summary: 'Necesitaba pedir datos a una API enviando el token obetenido despúes del login'
 ---
 
-## Al hacer login el backend me regresa un token que se usa para validar todas peticiones a la API
+## Al hacer login el backend me regresa un token que se usa para validar todas las peticiones a la API
 
 **Recuerda importar axios**
 
 
-Supongamos que ya guardaste los datos que te dio el backend en el localStorage, lo primero es recuperarlos y guardarlos en una variable, en este ejemplo datos:
+Supongamos que ya guardaste los datos que te dio el backend en el localStorage por lo que primero hay recuperarlos y guardarlos en una variable, en este ejemplo datos:
 
 ```javascript
 const datos = JSON.parse(localStorage.getItem("user"))
@@ -31,7 +31,7 @@ Ahora la petición con axios debe tener el header, de lo contrario el backend te
 
 ```javascript
 axios
-.get("http://localhost:3000/api/v1/cfdi", {
+.get("http://localhost:3000/api/", {
   headers: { Authorization: headers },
 })
 .then(response => {
