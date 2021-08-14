@@ -7,13 +7,23 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Wed, 11 Aug 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sat, 14 Aug 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwk</guid>
+    <guid>https://pablosolana.dev/blog/consumir-la-api-de-github</guid>
+    <title>Consumir la API de Github con React</title>
+    <link>https://pablosolana.dev/blog/consumir-la-api-de-github</link>
+    <description>En la versión 2.0 de mi web me conectaba a la API de Github para recuperar mis repos</description>
+    <pubDate>Sat, 14 Aug 2021 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>API</category><category>GITHUB</category><category>REACT</category><category>hook</category>
+  </item>
+
+  <item>
+    <guid>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwt</guid>
     <title>Obteniendo datos con axios y JavaScript Web Tokens (jwt)</title>
-    <link>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwk</link>
+    <link>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwt</link>
     <description>Necesitaba pedir datos a una API enviando el token obetenido despúes del login</description>
     <pubDate>Wed, 11 Aug 2021 00:00:00 GMT</pubDate>
     <author>hola@pablosolana.dev (Pablo Solana)</author>

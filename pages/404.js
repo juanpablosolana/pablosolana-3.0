@@ -11,7 +11,7 @@ export default function FourZeroFour() {
       <div className="max-w-md">
         <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">No encontrado</p>
         <p className="mb-8">
-          Híjole ese link no está activo, pero no te preocupes regresa al inicio para explorar más
+          ¡Híjole! el link no está activo, pero no te preocupes regresa al inicio para explorar más
         </p>
         <Link href="/">
           <button className="inline px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg shadow focus:outline-none focus:shadow-outline-blue hover:bg-blue-700 dark:hover:bg-blue-500">

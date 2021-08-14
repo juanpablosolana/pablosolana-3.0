@@ -1,0 +1,59 @@
+---
+title: Consumir la API de Github con React
+date: '2021-08-14'
+tags: ['API', 'GITHUB', 'REACT','hook']
+draft: false
+summary: 'En la versión 2.0 de mi web me conectaba a la API de Github para recuperar mis repos'
+---
+
+## Vamos a recuperar los repositorios de Github y guardarlos en el localStorage
+
+Recupera los datos de tu usuario desde la api:
+
+```javascript
+const API = "https://api.github.com/users/TUUSUARIODEGITHUB/repos"
+```
+
+En la primer acceso al sitio web se llama a la API, y se guardan los datos en el localStorage, recuerda que tiene un limite de consultas
+
+```javascript
+function Datos() {
+const [repos, setRepos] = useState([])
+const [reposCount, setReposCount] = useState([])
+useEffect(() => {
+  const data = sessionStorage.getItem("repos")
+
+   if(data){
+      myRepo = JSON.parse(data)
+      setReposCount(myRepo.length)
+      myRepo=myRepo.slice(0, 14)
+      return setRepos(myRepo)
+   }
+  async function fetchRepos() {
+    const response = await fetch(API)
+     myRepo = await response.json().catch(err => {
+      console.err(err)
+    })
+    sessionStorage.setItem("repos",JSON.stringify(myRepo))
+    setReposCount(myRepo.length)
+    myRepo = myRepo.slice(0, 14)
+    setRepos(myRepo)
+  }
+  fetchRepos()
+}, [])
+}
+```
+Ya tengo un arreglo con los datos por lo que solo queda imprimirlos
+
+```javascript
+ <ul className="repos-list">
+  {repos.map(repo => {
+    return <Repo repo={repo} key={repo.id} />
+  })}
+</ul>
+```
+
+
+[Te dejo el repositorio por si gustas ver a detalle el código](https://github.com/juanpablosolana/pablosolana.dev2.0/blob/main/src/components/repos.js).
+
+Saludos.
