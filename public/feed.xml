@@ -7,9 +7,19 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Sat, 14 Aug 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sat, 28 Aug 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://pablosolana.dev/blog/formulario-de-contacto-sin-backend</guid>
+    <title>Formulario de contacto sin backend</title>
+    <link>https://pablosolana.dev/blog/formulario-de-contacto-sin-backend</link>
+    <description>Los CFDI proveen toda la información de la factura por lo que vamos a generar una API para hacer consultas</description>
+    <pubDate>Sat, 28 Aug 2021 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>Backend</category><category>Form</category><category>Hooks</category><category>formsubmit</category><category>react</category>
+  </item>
+
   <item>
     <guid>https://pablosolana.dev/blog/consumir-la-api-de-github</guid>
     <title>Consumir la API de Github con React</title>

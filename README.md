@@ -12,13 +12,6 @@ This is a [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com
 
 Check out the documentation below to get started. Facing issues? Checkout of the [FAQ page](https://github.com/timlrx/tailwind-nextjs-starter-blog/wiki) and do a search on past issues. Feel free to open a new issue if none has been posted previously.
 
-## Examples
-
-- [Demo Blog](https://tailwind-nextjs-starter-blog.vercel.app/) - this repo
-- [My personal blog](https://www.timlrx.com) - modified to auto-generate blog posts with dates
-
-Using the template? Happy to accept any PR with modifications made e.g. sub-paths, localization or multiple authors
-
 ## Motivation
 
 I wanted to port my existing blog to Nextjs and Tailwind CSS but there was no easy out of the box template to use so I decided to create one.
@@ -131,7 +124,7 @@ Here's an example of a post's frontmatter:
 
 ```
 ---
-title: 'Introducing Tailwind Nexjs Starter Blog'
+title: 'Introducing Starter Blog'
 date: '2021-01-12'
 lastmod: '2021-01-18'
 tags: ['next-js', 'tailwind', 'guide']
@@ -151,9 +144,9 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 
 ## Deploy
 
-**Vercel**  
+**Vercel**
 The easiest way to deploy the template is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js. Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-**Netlify / Github Pages / Firebase etc.**  
+**Netlify / Github Pages / Firebase etc.**
 As the template uses `next/image` for image optimization, additional configurations has to be made to deploy on other popular static hosting websites like [Netlify](https://www.netlify.com/) or [Github Pages](https://pages.github.com/). An alternative image optimization provider such as Imgix, Cloudinary or Akamai has to be used. Alternatively, replace the `next/image` component with a standard `<img>` tag. See [`next/image` documentation](https://nextjs.org/docs/basic-features/image-optimization) for more details.
-# pablosolana-3.0
+

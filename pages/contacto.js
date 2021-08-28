@@ -13,19 +13,16 @@ const Menu = () => {
       $loader = document.querySelector('.contact-form-loader'),
       $response = document.querySelector('.contact-form-response')
     $loader.classList.remove('none')
-    console.log($form)
     fetch('https://formsubmit.co/ajax/me.pablosolana@altmails.com', {
       method: 'POST',
       body: new FormData($form),
     })
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .then((json) => {
-        console.log(json)
         window.location.hash = '#gracias'
         $form.reset()
       })
       .catch((err) => {
-        console.log(err)
         let message = err.statusText || 'Ocurrió un error al enviar, intenta nuevamente'
         $response.querySelector('h3').innerHTML = `Error ${err.status}: ${message}`
       })
@@ -44,7 +41,7 @@ const Menu = () => {
         <form className="max-w-md p-2 mx-auto contact-form" onSubmit={handleSubmit(onSubmit)}>
           <div className="text-center">
             <p className="p-4">
-              Si quieres trabajar conmigo en tu próximo proyecto, no dudes en ponerse en contacto
+              Si quieres trabajar conmigo en tu próximo proyecto, no dudes en ponerte en contacto
             </p>
           </div>
           <input
