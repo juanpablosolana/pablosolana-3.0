@@ -8,8 +8,9 @@ const projectsData = [
   },
   {
     title: 'Leer datos de una bascula por puerto serial',
-    description: 'Obtengo el valor del peso desde la bascula para consumirlo desde una API',
-    imgSrc: '/static/images/bascula.jpeg',
+    description: 'Obtengo el valor del peso desde la bascula para mostrarlo desde una API',
+    imgSrc: '/static/images/bascula/bascula.jpeg',
+    href: '/blog/datos-desde-el-puerto-serial',
   },
 ]
 

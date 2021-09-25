@@ -1,0 +1,67 @@
+---
+title: Leer datos de una bascula por puerto serial
+date: '2021-09-25'
+tags: ['NodeJS', 'Seiral', 'Puerto','API']
+draft: false
+summary: 'Obtengo el valor del peso desde la bascula para mostrarlo desde una API'
+---
+
+## Antes en el despacho se tenía que capturar la información de cada una de las facturas ¿Te lo imaginas?
+
+La necesidad de sistematizar los datos de los CFDI era un problema por lo que me di a la tarea de generar una API para solucionarlo.
+
+Como siempre decidí utilizar NodeJS y les voy platicar las partes del proyecto, necesitas las dependencias:
+* **express**
+* **cors**
+* **cfdi-to-json**
+* **fs**
+* **path**
+
+
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image alt="Maple" src="/static/images/bascula/bascula.jpeg" width={640} height={427} />
+  </div>
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image alt="Lake" src="/static/images/bascula/bascula-valores.jpeg" width={640} height={427} />
+  </div>
+</div>
+
+Al correr el servidor y entrar a la ruta raíz comienza la magia:
+
+```javascript
+fs.readdir('./',  function (err, archivos) {
+if (err) {
+  onError(err);
+  return;
+}
+archivos.forEach(file => {
+  if (path.extname(file) == '.xml'){
+     let stats = fs.statSync(file);
+     stats.size>1000? cfdi.push(file): null
+  }
+})
+})
+```
+Lo primero que hago es leer el directorio para guardar solo archivos del tipo xml y que su tamaño sea mayor a 1000 bytes, si cumple con la condición guardo el nombre del archivo en un array.
+
+```javascript
+cfdi.forEach(element => {
+    cfdiJson.push(jsonCfdi = CfdiToJson.parse({ path: element }));
+  })
+});
+```
+Por cada archivo que encuentre en el directorio lo transformo a JSON y lo guardo en un array.
+
+```javascript
+app.get('/', (request, response)=>{
+  response.send(findId)
+})
+```
+Lo último es mostrar los datos de todos los xml en un JSON para que pueda ser consultado.
+
+
+Te dejo el repositorio por si gustas ver a detalle el [código](https://github.com/juanpablosolana/cfdi-api) y la API funcionado.
+
+Saludos.
