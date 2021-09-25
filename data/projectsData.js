@@ -6,6 +6,11 @@ const projectsData = [
     imgSrc: '/static/images/sat.webp',
     href: '/blog/estatus-factura-sat',
   },
+  {
+    title: 'Leer datos de una bascula por puerto serial',
+    description: 'Obtengo el valor del peso desde la bascula para consumirlo desde una API',
+    imgSrc: '/static/images/bascula.jpeg',
+  },
 ]
 
 export default projectsData
