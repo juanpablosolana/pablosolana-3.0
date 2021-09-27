@@ -16,9 +16,8 @@ export default function Projects() {
             Algunos de mis diplomas
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Y otras cosas como mi
             <a target="_blank" href="/static/documentos/PabloSolana.pdf" rel="noopener noreferrer">
-              CV que puedes descargar dando clic
+              Y otras cosas como mi CV que puedes descargar dando clic aquí
             </a>
           </p>
         </div>

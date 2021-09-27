@@ -8,7 +8,6 @@ twitter: https://twitter.com/iLinKN95
 linkedin: https://www.linkedin.com/in/juan-pablo-solana-ortiz/
 github: https://github.com/juanpablosolana
 ---
-Soy un apasionado por programar y me gusta aprender nuevas tecnologías.
 
 Inicié mi carrera con el lenguaje de programación C + +, y luego pasó a Java y Python pero el mundo de internet me conquistó desde que conocí HTML y CSS en la escuela preparatoria.
 
