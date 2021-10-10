@@ -3,7 +3,7 @@ title: Formulario de contacto sin backend
 date: '2021-08-28'
 tags: ['Backend', 'Form', 'Hooks', 'formsubmit', 'react']
 draft: false
-summary: 'Los CFDI proveen toda la información de la factura por lo que vamos a generar una API para hacer consultas'
+summary: 'Ocuparemos la API de https://formsubmit.co/ para crear un formulario de contacto sin backend directo a tu email'
 ---
 
 ## Ocuparemos la API de https://formsubmit.co/ para crear un formulario de contacto sin backend directo a tu email.
@@ -21,7 +21,9 @@ fetch('https://formsubmit.co/ajax/me.pablosolana@altmails.com', {
   body: new FormData($form),
 })
 ```
+
 En el formulario se tienen unas clases de control '.contact-form' el contenido lo meto a la variable $form y luego hago un fetch a formsubmit del tipo POST con el contenido del formulario.
+
 ```javascript
 .then((res) => (res.ok ? res.json() : Promise.reject(res)))
 .then((json) => {
@@ -45,40 +47,19 @@ El truco es agregar clases para activar los mensajes modales, en el ejemplo #gra
 
 ```html
 <div className="max-w-6xl mx-auto">
-  <form className="max-w-md p-2 mx-auto contact-form" onSubmit={handleSubmit(onSubmit)}>
+  <form className="max-w-md p-2 mx-auto contact-form" onSubmit="{handleSubmit(onSubmit)}">
     <div className="text-center">
       <p className="p-4">
         Si quieres trabajar conmigo en tu próximo proyecto, no dudes en ponerse en contacto
       </p>
     </div>
-    <input
-      type="text"
-      name="name"
-      placeholder=" Ingresa tu nombre"
-      id="name"
-      {...register('Nombre')}
-      patter="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-      className="w-4/5"
-      required />
-    <input
-      type="email"
-      {...register('email')}
-      name="email"
-      id="email"
-      placeholder=" No olvides tu correo"
-      title="email no valido"
-      pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-      className="w-4/5"
-      required/>
-    <textarea
-      name="coments"
-      id="coments"
-      {...register('coments')}
-      cols="30"
-      rows="5"
-      placeholder=" Platicame de tus ideas de desarrollo "
-      className="w-4/5"
-      required/>
+    <input type="text" name="name" placeholder=" Ingresa tu nombre" id="name"
+    {...register('Nombre')} patter="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" className="w-4/5" required />
+    <input type="email" {...register('email')} name="email" id="email" placeholder=" No olvides tu
+    correo" title="email no valido"
+    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" className="w-4/5"
+    required/> <textarea name="coments" id="coments" {...register('coments')} cols="30" rows="5"
+    placeholder=" Platicame de tus ideas de desarrollo " className="w-4/5" required/>
     <div className="contact-form-loader">
       {errors.exampleRequired && <span>This field is required</span>}
       <svg
@@ -86,7 +67,8 @@ El truco es agregar clases para activar los mensajes modales, en el ejemplo #gra
         width="38"
         height="38"
         stroke="#d90062"
-        viewBox="0 0 38 38">
+        viewBox="0 0 38 38"
+      >
         <g fill="none" fillRule="evenodd" strokeWidth="2" transform="translate(1 1)">
           <circle cx="18" cy="18" r="18" strokeOpacity="0.5"></circle>
           <path d="M36 18c0-9.94-8.06-18-18-18">
@@ -96,8 +78,8 @@ El truco es agregar clases para activar los mensajes modales, en el ejemplo #gra
               from="0 18 18"
               repeatCount="indefinite"
               to="360 18 18"
-              type="rotate">
-            </animateTransform>
+              type="rotate"
+            ></animateTransform>
           </path>
         </g>
       </svg>
@@ -106,7 +88,7 @@ El truco es agregar clases para activar los mensajes modales, en el ejemplo #gra
       type="submit"
       value="Enviar mensaje"
       className="p-3 btn-reverse hover:text-white"
-      onSubmit={handleSubmit}
+      onSubmit="{handleSubmit}"
     />
   </form>
   <article id="gracias" className="modal transparente5">
@@ -117,13 +99,16 @@ El truco es agregar clases para activar los mensajes modales, en el ejemplo #gra
       <span className="inline-block mr-8 align-middle">
         <b className="capitalize">¡Enviado! </b> En breve estaremos en contacto
       </span>
-      <button className="absolute top-0 right-0 mt-4 mr-6 text-2xl font-semibold leading-none bg-transparent outline-none focus:outline-none">
+      <button
+        className="absolute top-0 right-0 mt-4 mr-6 text-2xl font-semibold leading-none bg-transparent outline-none focus:outline-none"
+      >
         <span>×</span>
       </button>
     </div>
   </article>
 </div>
 ```
+
 Al utilizar react-hook-form tenemos todos las funciones de formularios.
 
 ```css
@@ -167,10 +152,7 @@ Al utilizar react-hook-form tenemos todos las funciones de formularios.
   text-align: center;
   display: none;
 }
-
 ```
-
-
 
 Te dejo el repositorio por si gustas ver a detalle el [código](https://github.com/juanpablosolana/pablosolana-3.0/blob/main/pages/contacto.js) y la API funcionado.
 

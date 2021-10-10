@@ -7,9 +7,19 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Sat, 25 Sep 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sat, 09 Oct 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://pablosolana.dev/blog/react-rick-and-morty-api</guid>
+    <title>Consumiendo la api de Rick and Morty desde React</title>
+    <link>https://pablosolana.dev/blog/react-rick-and-morty-api</link>
+    <description>Utilizando hooks para controlar las peticiones a la api</description>
+    <pubDate>Sat, 09 Oct 2021 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>React</category><category>API</category><category>Rick</category><category>Morty</category>
+  </item>
+
   <item>
     <guid>https://pablosolana.dev/blog/datos-desde-el-puerto-serial</guid>
     <title>Leer datos de una bascula por puerto serial</title>
@@ -24,7 +34,7 @@
     <guid>https://pablosolana.dev/blog/formulario-de-contacto-sin-backend</guid>
     <title>Formulario de contacto sin backend</title>
     <link>https://pablosolana.dev/blog/formulario-de-contacto-sin-backend</link>
-    <description>Los CFDI proveen toda la información de la factura por lo que vamos a generar una API para hacer consultas</description>
+    <description>Ocuparemos la API de https://formsubmit.co/ para crear un formulario de contacto sin backend directo a tu email</description>
     <pubDate>Sat, 28 Aug 2021 00:00:00 GMT</pubDate>
     <author>hola@pablosolana.dev (Pablo Solana)</author>
     <category>Backend</category><category>Form</category><category>Hooks</category><category>formsubmit</category><category>react</category>
@@ -41,9 +51,9 @@
   </item>
 
   <item>
-    <guid>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwt</guid>
+    <guid>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwt copy</guid>
     <title>Obteniendo datos con axios y JavaScript Web Tokens (jwt)</title>
-    <link>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwt</link>
+    <link>https://pablosolana.dev/blog/obtener-datos-con-axios-y-jwt copy</link>
     <description>Necesitaba pedir datos a una API enviando el token obetenido despúes del login</description>
     <pubDate>Wed, 11 Aug 2021 00:00:00 GMT</pubDate>
     <author>hola@pablosolana.dev (Pablo Solana)</author>
