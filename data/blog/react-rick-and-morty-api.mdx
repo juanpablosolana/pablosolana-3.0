@@ -57,10 +57,11 @@ Inicializamos los hooks:
 
 **page** = Controla la paginación
 
-**speciesOption** = Filtrar por especie
+**speciesOption** = Filtrar por especie para hacer el filtro de los personajes
 
-**statusOption** = Almacena el estatus que seleccina el usuario para hacer el filtro de los personajes
-Con el trucazo del document.title = `${characterTarget.name ||"React Rick & Morty API"} | React Rick & Morty API`; se actualiza el titulo de la página.
+**statusOption** = Almacena el estatus para hacer el filtro de los personajes
+
+Con el trucazo del document.title = `${characterTarget.name ||"React Rick & Morty API"} | React Rick & Morty API`; se actualiza el titulo de la página por cada selección.
 
 ```javascript
 useEffect(() => {
