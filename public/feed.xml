@@ -7,9 +7,19 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Sat, 09 Oct 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Fri, 05 Nov 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://pablosolana.dev/blog/cfdiapi</guid>
+    <title>cfdiapi.com</title>
+    <link>https://pablosolana.dev/blog/cfdiapi</link>
+    <description>Ahora puedes consulta fácilmente el estatus de las facturas emitidas por el SAT MX</description>
+    <pubDate>Fri, 05 Nov 2021 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>React</category><category>NEXT</category><category>API</category><category>Tailwind</category>
+  </item>
+
   <item>
     <guid>https://pablosolana.dev/blog/react-rick-and-morty-api</guid>
     <title>Consumiendo la api de Rick and Morty desde React</title>

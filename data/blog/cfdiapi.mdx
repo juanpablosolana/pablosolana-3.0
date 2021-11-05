@@ -1,0 +1,29 @@
+---
+title: cfdiapi.com
+date: '2021-11-05'
+tags: ['React', 'NEXT', 'API', 'Tailwind']
+draft: false
+summary: 'Ahora puedes consulta fácilmente el estatus de las facturas emitidas por el SAT MX'
+---
+
+## cfdiapi.com
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image alt="cfdiapi.com" src="/static/images/cfdiapi/cfdiapi.png" width={650} height={350} />
+  </div>
+  Te recomiendo [ver el proyecto](https://cfdiapi.com) antes de continuar.
+</div>
+
+La aplicación utiliza NextJS 12 para poder validar los datos ingresados, el framework permite crear endpoints al estilo de NodeJs por lo que ahora es muy simple y rápido consultar la información.
+
+Para el aspecto grafico utilice Tailwind CSS lo que le da un aspecto moderno y responsivo.
+
+El hosting fue gracias a Vercel ya que la integración con NextJS es espectacular (ya saben es el uno para el otro).
+
+Al día de hoy solo está disponible la consulta llenando el formulario, pero en pocos días voy a liberar la opción de subir el CFDI.
+
+Este proyecto quiere ayudar a todos los ciudadanos a verificar si las facturas que les dan o emiten está legalmente procesadas por el SAT MX y conocer es estatus ya que se pueden cancelar.
+El api va a estar disponible para todos, pero estoy agregando JWT para proteger el servidor de posibles abusos.
+
+Saludos y no olvides verificar el estatus de tus comprobantes fiscales digitales por internet.

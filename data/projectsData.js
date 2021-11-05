@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: 'cfdiapi.com',
+    description: `Ahora puedes consultar fácilmente el estatus de las facturas emitidas por el SAT MX `,
+    imgSrc: '/static/images/cfdiapi/cfdiapi.png',
+    href: '/blog/cfdiapi',
+  },
+  {
     title: 'Rick and Morty API + ReactJS',
     description: `Utilizando hooks para controlar las peticiones a la api`,
     imgSrc: '/static/images/ReactRickMortyAPI/ReactRickMortyAPI.png',
