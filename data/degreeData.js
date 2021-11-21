@@ -9,19 +9,19 @@ const projectsData = [
     title: 'Master en Codign',
     description: `Dev.f`,
     imgSrc: '/static/images/diplomas/DEVF_JUAN_PABLO SOLANA ORTIZ_MASTER_EN CODING_page-0001.jpg',
-    href: `/static/documentos/DEVF_JUAN_PABLO SOLANA ORTIZ_MASTER_EN CODING.pdf`,
+    href: `https://www.pablosolana.dev/static/documentos/DEVF_JUAN_PABLO%20SOLANA%20ORTIZ_MASTER_EN%20CODING.pdf`,
   },
   {
     title: 'Curso de introducción al desarrollo web',
     description: `Leonidas Esteban`,
     imgSrc: '/static/images/diplomas/introdesaweb_page-0001.jpg',
-    href: `/static/documentos/introdesaweb.pdf`,
+    href: `https://www.pablosolana.dev/static/documentos/introdesaweb.pdf`,
   },
   {
     title: 'Curso de Figma para frontends',
     description: `Leonidas Esteban`,
     imgSrc: '/static/images/diplomas/figmafront_page-0001.jpg',
-    href: `/static/documentos/figmafront.pdf`,
+    href: `https://www.pablosolana.dev/static/documentos/figmafront.pdf`,
   },
   {
     title: 'NDG Linux Unhatched course in the Cisco Networking Academy',
