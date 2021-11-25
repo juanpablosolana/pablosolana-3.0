@@ -1,0 +1,147 @@
+---
+title: MercadoPago Checkout Pro
+date: '2021-11-25'
+tags: ['React', 'NEXT', 'API', 'MercadoPago']
+draft: false
+summary: 'Te platico los pasos que hice para lograr la certificación'
+---
+
+## Certificación Checkout Pro de MercadoPago
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image
+      alt="cfdiapi.com"
+      src="/static/images/diplomas/mercadopago.png"
+      width={650}
+      height={350}
+    />
+  </div>
+  Te recomiendo [ver el proyecto](https://mercado-pago-checkout-pro.pablosolana.dev) antes de continuar.
+</div>
+
+La certificación es un buen ejercicio de fullstack.
+
+Puedes encontrar más detalles [por acá](https://www.mercadopago.com.mx/developers/es/developer-program/checkout-pro).
+
+Para el ejercicio decidí usar Next JS por la posibilidad de crear endpoints al estilo de Node JS.
+
+-- Backend / Endpoint --
+
+/api/preference
+
+MercadoPago en su documentación pide que instales la dependencia mercadopago,
+
+```javascript
+import mercadopago from 'mercadopago'
+mercadopago.configure({
+  access_token: process.env.MERCADOPAGO,
+})
+```
+
+Estoy utilizando .env.local para almacenar las credenciales y es IMPORTANTE poner los datos que ellos te dan (al inicio yo puse las mías y no jalaba).
+
+```javascript
+mercadopago.preferences
+  .create(preference)
+  .then(function (response) {
+    res.json({
+      id: response.body.id,
+    })
+  })
+  .catch(function (error) {
+    res.status(200).json({ err: error })
+  })
+```
+
+Hay que crear una “preferencia” donde se envía un objeto, acá también hay que tener cuidado sobre la información que ingresas ya que debe ser la se te pide.
+
+```javascript
+let preference = {
+  items: [
+    {
+      id: 1234,
+      title,
+      picture_url,
+      description: 'Dispositivo móvil de Tienda e-commerce',
+      quantity: Number(quantity),
+      unit_price: Number(price),
+    },
+  ],
+  payer: {
+    phone: {
+      area_code: '11',
+      number: Number(22223333),
+    },
+    address: {
+      zip_code: '1111',
+      street_name: 'Falsa',
+      street_number: Number(123),
+    },
+    email: 'test_user_81131286@testuser.com',
+    name: 'Lalo',
+    surname: 'Landa',
+  },
+  back_urls: {
+    success: 'https://mercado-pago-checkout-pro.vercel.app/api/feedback',
+    failure: 'https://mercado-pago-checkout-pro.vercel.app/api/feedback',
+    pending: 'https://mercado-pago-checkout-pro.vercel.app/api/feedback',
+  },
+  auto_return: 'approved',
+  payment_methods: {
+    excluded_payment_methods: [
+      {
+        id: 'amex',
+      },
+    ],
+    excluded_payment_types: [
+      {
+        id: 'atm',
+      },
+    ],
+    installments: 6,
+  },
+  external_reference: 'juanpablosolana@gmail.com',
+  notification_url: 'https://mercado-pago-checkout-pro.vercel.app/api/webhook',
+}
+```
+
+Si todo está bien, el servicio de MP te devuelve un id, ese dato complementa la url de pago,
+
+```javascript
+;`https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id={data.id}`
+```
+
+-- Frontend --
+
+Un fetch va a ser suficiente para recuperar el dato que necesitamos y completar el pago
+
+```javascript
+const fetchData = async (item) => {
+  fetch(
+    `/api/preference?title=${item.name}&price=${item.price}&quantity=1&picture_url=https://mercado-pago-checkout-pro.vercel.app${item.image}`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      window.location.replace(
+        `https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=${data.id}`
+      )
+    })
+    .catch((error) => console.log(error))
+}
+```
+
+La función recibe lo valores de del articulo (ítem) y los envía por una promesa al endpoint de preferences, si todo funcionó bien, serás direccionado en automático a una pagina de mercado pago para completar el procedimiento.
+
+Ingresa estos datos para el pago:
+
+- Tarjeta Número: Visa 4075 5957 1648 3764
+- Código de seguridad: 123
+- Fecha de vencimiento: 11/25
+- Nombre del titular: APRO
+
+Felicidades, completaste el pago.
+
+[Te dejo el repositorio por si gustas ver a detalle el código](https://github.com/juanpablosolana/MercadoPago-CheckoutPro).
+
+Saludos.

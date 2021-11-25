@@ -7,9 +7,19 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Fri, 05 Nov 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 25 Nov 2021 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://pablosolana.dev/blog/mercado-pago-checkout-pro</guid>
+    <title>MercadoPago Checkout Pro</title>
+    <link>https://pablosolana.dev/blog/mercado-pago-checkout-pro</link>
+    <description>Te platico los pasos que hice para lograr la certificación</description>
+    <pubDate>Thu, 25 Nov 2021 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>React</category><category>NEXT</category><category>API</category><category>MercadoPago</category>
+  </item>
+
   <item>
     <guid>https://pablosolana.dev/blog/cfdiapi</guid>
     <title>cfdiapi.com</title>
