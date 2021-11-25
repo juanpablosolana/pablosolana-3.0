@@ -6,16 +6,16 @@ const projectsData = [
     href: '/blog/cfdiapi',
   },
   {
-    title: 'MercadoPago Checkout Pro',
-    description: `Acá están los pasos que hice para la certificación de MercadoPago Checkout Pro`,
-    imgSrc: '/static/images/mp/mp.png',
-    href: '/blog/mercado-pago-checkout-pro',
-  },
-  {
     title: 'Rick and Morty API + ReactJS',
     description: `Utilizando hooks para controlar las peticiones a la api`,
     imgSrc: '/static/images/ReactRickMortyAPI/ReactRickMortyAPI.png',
     href: '/blog/react-rick-and-morty-api',
+  },
+  {
+    title: 'MercadoPago Checkout Pro',
+    description: `Acá están los pasos que hice para la certificación de MercadoPago Checkout Pro`,
+    imgSrc: '/static/images/mp/mp.png',
+    href: '/blog/mercado-pago-checkout-pro',
   },
   {
     title: 'Leer datos de una bascula por puerto serial',
