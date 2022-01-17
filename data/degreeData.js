@@ -24,6 +24,12 @@ const projectsData = [
     href: `https://www.pablosolana.dev/static/documentos/introdesaweb.pdf`,
   },
   {
+    title: 'Curso esencial de HTML y CSS',
+    description: `Leonidas Esteban`,
+    imgSrc: '/static/images/diplomas/htmlcss-0001.jpg',
+    href: `https://www.pablosolana.dev/static/documentos/htmlcss.pdf`,
+  },
+  {
     title: 'Curso de Figma para frontends',
     description: `Leonidas Esteban`,
     imgSrc: '/static/images/diplomas/figmafront_page-0001.jpg',
