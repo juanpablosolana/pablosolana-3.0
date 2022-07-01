@@ -6,6 +6,12 @@ const projectsData = [
     href: '/blog/cfdiapi',
   },
   {
+    title: 'api.cfdiapi.com',
+    description: `Documentación de la API `,
+    imgSrc: '/static/images/cfdiapi/api.cfdiapi.png',
+    href: '/blog/api-cfdiapi',
+  },
+  {
     title: 'Rick and Morty API + ReactJS',
     description: `Utilizando hooks para controlar las peticiones a la api`,
     imgSrc: '/static/images/ReactRickMortyAPI/ReactRickMortyAPI.png',

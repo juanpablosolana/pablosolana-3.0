@@ -1,0 +1,89 @@
+---
+title: api.cfdiapi.com
+date: '2022-06-30'
+tags: ['ASTROJS', 'FRONTEND', 'API', 'DOCUMENTACIÓN']
+draft: false
+summary: 'La documentación de la API gracias a Astro JS'
+---
+
+## api.cfdiapi.com
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image
+      alt="api.cfdiapi.com"
+      src="/static/images/cfdiapi/api.cfdiapi.png"
+      width={650}
+      height={350}
+    />
+  </div>
+  Te recomiendo [ver el proyecto](https://api.cfdiapi.com) antes de continuar.
+</div>
+
+La aplicación utiliza Astro JS en su template de documentación para mostrar un sitio estático, rápido y completamente funcional.
+
+```javascript
+# npm
+npm create astro@latest
+
+# yarn
+yarn create astro
+
+# pnpm
+pnpm create astro@latest
+```
+
+La documentación completa la encuentras [acá](https://docs.astro.build/en/install/auto/)
+
+Para el deploy utilicé Github actions con la siguiente configuración:
+
+```yml
+name: Github Pages Astro CI
+
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  # Using a different branch name? Replace `main` with your branch’s name
+  push:
+    branches: [main]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+
+    # Allow this job to push changes to your repository
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out your repository using git
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
+      - name: Install dependencies
+        run: npm ci
+
+      # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
+      - name: Build Astro
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # `./dist` is the default Astro build directory.
+          # If you changed that, update it here too.
+          publish_dir: ./dist
+```
+
+Para finalizar solo apunté el subdominio api.cfdiapi.com al CNAME de GitHub 🔥
+
+Como siempre, dejo el repositorio por si gustas ver a detalle el [código](https://github.com/juanpablosolana/cfdiapi-doc).
+
+Saludos.👨‍🚀

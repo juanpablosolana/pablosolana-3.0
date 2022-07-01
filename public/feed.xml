@@ -7,9 +7,19 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Thu, 25 Nov 2021 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Thu, 30 Jun 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://pablosolana.dev/blog/api-cfdiapi</guid>
+    <title>api.cfdiapi.com</title>
+    <link>https://pablosolana.dev/blog/api-cfdiapi</link>
+    <description>La documentación de la API gracias a Astro JS</description>
+    <pubDate>Thu, 30 Jun 2022 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>ASTROJS</category><category>FRONTEND</category><category>API</category><category>DOCUMENTACIÓN</category>
+  </item>
+
   <item>
     <guid>https://pablosolana.dev/blog/mercado-pago-checkout-pro</guid>
     <title>MercadoPago Checkout Pro</title>
