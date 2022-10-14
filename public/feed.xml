@@ -7,9 +7,19 @@
       <language>es-MX</language>
       <managingEditor>hola@pablosolana.dev (Pablo Solana)</managingEditor>
       <webMaster>hola@pablosolana.dev (Pablo Solana)</webMaster>
-      <lastBuildDate>Thu, 30 Jun 2022 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Fri, 14 Oct 2022 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://pablosolana.dev/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://pablosolana.dev/blog/github-clone-react</guid>
+    <title>Clonando github consumiendo su api</title>
+    <link>https://pablosolana.dev/blog/github-clone-react</link>
+    <description>Utilizando hooks para controlar las peticiones a la api</description>
+    <pubDate>Fri, 14 Oct 2022 00:00:00 GMT</pubDate>
+    <author>hola@pablosolana.dev (Pablo Solana)</author>
+    <category>React</category><category>github</category><category>API</category>
+  </item>
+
   <item>
     <guid>https://pablosolana.dev/blog/api-cfdiapi</guid>
     <title>api.cfdiapi.com</title>

@@ -12,6 +12,12 @@ const projectsData = [
     href: '/blog/api-cfdiapi',
   },
   {
+    title: 'Github clon',
+    description: `Código del curso de React.js de Leonidas Esteban`,
+    imgSrc: '/static/images/github/github-clone.png',
+    href: '/blog/github-clone-react',
+  },
+  {
     title: 'Rick and Morty API + ReactJS',
     description: `Utilizando hooks para controlar las peticiones a la api`,
     imgSrc: '/static/images/ReactRickMortyAPI/ReactRickMortyAPI.png',
