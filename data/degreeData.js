@@ -18,6 +18,13 @@ const projectsData = [
     href: `https://www.pablosolana.dev/static/documentos/DEVF_JUAN_PABLO%20SOLANA%20ORTIZ_MASTER_EN%20CODING.pdf`,
   },
   {
+    title: 'Curso de React.js',
+    description: `Leonidas Esteban`,
+    imgSrc:
+      'https://leonidasesteban.com/_next/image?url=https%3A%2F%2Fd1ngjctyujvjjy.cloudfront.net%2Fpng_certificates%2F2022%2F10%2F14%2Freact%2F1b439a27-ec93-4141-b1ed-0dee6438e9eb.jpeg&w=640&q=75',
+    href: `https://d1ngjctyujvjjy.cloudfront.net/certificates/2022/10/14/react/1b439a27-ec93-4141-b1ed-0dee6438e9eb.pdf`,
+  },
+  {
     title: 'Curso de introducción al desarrollo web',
     description: `Leonidas Esteban`,
     imgSrc: '/static/images/diplomas/introdesaweb_page-0001.jpg',
